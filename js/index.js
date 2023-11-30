@@ -1,68 +1,68 @@
 // 柱状图模块1-片区备案数
-(function(){
+（功能（）{
     // 实例化对象
-    var myChart = echarts.init(document.querySelector(".bar .chart"));
+    var  myChart = echarts. init ( document.querySelector ( " .bar .chart" ) ) ;
     // 2.指定配置项和数据
-    var option = {
-        color:['#3398DB'],
-        // 坐标轴指示器，触发生效，影子效果
-        tooltip: {
-          trigger: 'axis',
-          axisPointer: {
-            type: 'shadow'
+     变量选项= {
+        颜色：[ '#3398DB' ]，
+        // 坐标轴转弯，触发生效，影子效果
+        工具提示：{
+          触发器：'轴'，
+          轴指针：{
+            类型：'影子'
           }
-        },
+        } ,
         // 图表的大小
-        grid: {
-          left: '0%',
-          right: '0%',
-          bottom: '4%',
-          top: '10px',
-          containLabel: true
-        },
-        xAxis: [
+        网格：{
+          左：'0%'，
+          右：'0%'，
+          底部：'4%'，
+          顶部：'10px'，
+          包含标签：true
+        } ,
+        x轴：[
           {
-            type: 'category',
-            data: ['高教区', '上市产业园', '斜塘', '桑田岛'],
-            axisTick: {
-              alignWithLabel: true
-            },
-            // 修改刻度标签相关样式
-            axisLabel: {
-              color: 'rgba(255, 255, 255, 0.6)',
-              fontSize: 10.5
-            },
-            // 不显示X坐标抽样式
-            axisLine: {
-              show: false,
-            },
+            类型：'类别'，
+            data : [ '高教区' , '上市产业园' , '斜塘' , '桑田岛' ] ,
+            轴刻度：{
+              与标签对齐：真
+            } ,
+            // 修改标签相关样式
+            轴标签：{
+              颜色: 'rgba(255, 255, 255, 0.6)' ,
+              字体大小：10.5
+            } ,
+            // 不显示X底盘排气式
+            轴线：{
+              显示：假，
+            } ,
           }
-        ],
-        yAxis: [
+        ] ,
+        y 轴：[
           {
-            type: 'value',
-            // 修改刻度标签相关样式
-            axisLabel:{
-              color: 'rgba(255, 255, 255, 0.6)',
-              fontSize: 12
-            },
+            类型：'值'，
+            // 修改标签相关样式
+            轴标签：{
+              颜色: 'rgba(255, 255, 255, 0.6)' ,
+              字体大小：12
+            } ,
             // Y坐标轴样式改为2像素
-            axisLine: {
-              lineStyle: {
-                color: "rgba(255, 255, 255, .6)",
-                width: 2
+            轴线：{
+              线条样式：{
+                颜色: "rgba(255, 255, 255, .6)" ,
+                宽度：2
               }
-            },
+            } ,
             // Y轴分割线的颜色
-            splitLine: {
-              lineStyle: {
-                color: "rgba(255, 255, 255, 0.1)"
+            分割线：{
+              线条样式：{
+                颜色：“rgba(255,255,255,0.1)”
               }
-            },
-            // 不显示Y轴的刻度
-            axisTick: {
-              show: false,
-            },
+            } ,
+            // 不显示Y轴的初始值
+            轴刻度：{
+              显示：假，
+            } ,
           }
         ],
         series: [
@@ -640,12 +640,12 @@
   // 加载本地的吴中区JSON数据  
   //myChart.showLoading();
   
-  $.get('/map/科创区.json', function (geoJson) {
-    echarts.registerMap("kechuangqu", {geoJson:geoJson});
-    var myChart = echarts.init(document.querySelector(".map .chart"));
-    myChart.hideLoading();
-    var geoCoordMap = {
-    高教区: [120.74055428, 31.25907629],
+  $。get ( '../map/科创区.json' , function  ( geoJson )  {
+    埃图表。registerMap ( "科创趣" , { geoJson :geoJson } ) ;
+    var  myChart = echarts. init ( document.querySelector ( " .map .chart" ) ) ;
+    我的图表。隐藏加载( ) ;
+    var  geoCoordMap = {
+    高教区: [ 120.74055428 , 31.25907629 ] ,
     斜塘: [120.75895494, 31.28807782],
     东区: [120.81238311, 31.2791245],
     上市产业园: [120.76478344, 31.2718185],
