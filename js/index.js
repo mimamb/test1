@@ -1,68 +1,68 @@
 // 柱状图模块1-片区备案数
-（功能（）{
+(function(){
     // 实例化对象
-    var  myChart = echarts. init ( document.querySelector ( " .bar .chart" ) ) ;
+    var myChart = echarts.init(document.querySelector(".bar .chart"));
     // 2.指定配置项和数据
-     变量选项= {
-        颜色：[ '#3398DB' ]，
-        // 坐标轴转弯，触发生效，影子效果
-        工具提示：{
-          触发器：'轴'，
-          轴指针：{
-            类型：'影子'
+    var option = {
+        color:['#3398DB'],
+        // 坐标轴指示器，触发生效，影子效果
+        tooltip: {
+          trigger: 'axis',
+          axisPointer: {
+            type: 'shadow'
           }
-        } ,
+        },
         // 图表的大小
-        网格：{
-          左：'0%'，
-          右：'0%'，
-          底部：'4%'，
-          顶部：'10px'，
-          包含标签：true
-        } ,
-        x轴：[
+        grid: {
+          left: '0%',
+          right: '0%',
+          bottom: '4%',
+          top: '10px',
+          containLabel: true
+        },
+        xAxis: [
           {
-            类型：'类别'，
-            data : [ '高教区' , '上市产业园' , '斜塘' , '桑田岛' ] ,
-            轴刻度：{
-              与标签对齐：真
-            } ,
-            // 修改标签相关样式
-            轴标签：{
-              颜色: 'rgba(255, 255, 255, 0.6)' ,
-              字体大小：10.5
-            } ,
-            // 不显示X底盘排气式
-            轴线：{
-              显示：假，
-            } ,
+            type: 'category',
+            data: ['高教区', '上市产业园', '斜塘', '桑田岛'],
+            axisTick: {
+              alignWithLabel: true
+            },
+            // 修改刻度标签相关样式
+            axisLabel: {
+              color: 'rgba(255, 255, 255, 0.6)',
+              fontSize: 10.5
+            },
+            // 不显示X坐标抽样式
+            axisLine: {
+              show: false,
+            },
           }
-        ] ,
-        y 轴：[
+        ],
+        yAxis: [
           {
-            类型：'值'，
-            // 修改标签相关样式
-            轴标签：{
-              颜色: 'rgba(255, 255, 255, 0.6)' ,
-              字体大小：12
-            } ,
+            type: 'value',
+            // 修改刻度标签相关样式
+            axisLabel:{
+              color: 'rgba(255, 255, 255, 0.6)',
+              fontSize: 12
+            },
             // Y坐标轴样式改为2像素
-            轴线：{
-              线条样式：{
-                颜色: "rgba(255, 255, 255, .6)" ,
-                宽度：2
+            axisLine: {
+              lineStyle: {
+                color: "rgba(255, 255, 255, .6)",
+                width: 2
               }
-            } ,
+            },
             // Y轴分割线的颜色
-            分割线：{
-              线条样式：{
-                颜色：“rgba(255,255,255,0.1)”
+            splitLine: {
+              lineStyle: {
+                color: "rgba(255, 255, 255, 0.1)"
               }
-            } ,
-            // 不显示Y轴的初始值
-            轴刻度：{
-              显示：假，
-            } ,
+            },
+            // 不显示Y轴的刻度
+            axisTick: {
+              show: false,
+            },
           }
         ],
         series: [
@@ -70,7 +70,7 @@
             name: 'Direct',
             type: 'bar',
             barWidth: '30%',
-            data: [210, 150, 80, 80],
+            data: [329, 28, 58, 133],
             itemStyle: {
               //  修改柱子圆角
               barBorderRadius: 5
