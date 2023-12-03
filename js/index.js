@@ -699,7 +699,7 @@
   var myChart = echarts.init(document.querySelector(".map .chart"));
   myChart.showLoading();
   // var uploadedDataURL = "js/园区1.Jason";
-  $.get("js/园区1.Json", function (geoJson) {
+  $.get("js/园区1.geoJson", function (geoJson) {
     echarts.registerMap("kechuangqu", geoJson);
     // var myChart = echarts.init(document.querySelector(".map .chart"));
     myChart.hideLoading();
