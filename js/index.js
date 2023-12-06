@@ -352,21 +352,21 @@
   window.addEventListener("resize", function () {
     myChart.resize();
   });
-  // 5.点击切换2023 和 2022 的数据
-  // $('.line h2 a').on('click', function () {
-  //   // console.log($(this).index());
-  //   // 点击a 之后 根据当前a的索引号 找到对应的 yearData 相关对象
-  //   // console.log(yearData[$(this).index()]);
-  //   var obj = yearData[$(this).index()];
-  //   option.series[0].data = obj.data[0];
-  //   option.series[1].data = obj.data[1];
-  //   // 选中年份高亮
-  //   $('.line h2 a').removeClass('a-active');
-  //   $(this).addClass('a-active');
+  5.点击切换2023 和 2022 的数据
+  $('.line h2 a').on('click', function () {
+    // console.log($(this).index());
+    // 点击a 之后 根据当前a的索引号 找到对应的 yearData 相关对象
+    // console.log(yearData[$(this).index()]);
+    var obj = yearData[$(this).index()];
+    option.series[0].data = obj.data[0];
+    option.series[1].data = obj.data[1];
+    // 选中年份高亮
+    $('.line h2 a').removeClass('a-active');
+    $(this).addClass('a-active');
 
-  //   // 需要重新渲染
-  //   myChart.setOption(option);
-  // })
+    // 需要重新渲染
+    myChart.setOption(option);
+  })
 })();
 
 //  折线图模块2-月检查数量
@@ -578,7 +578,7 @@
       itemHeight: 10,
       textStyle: {
         color: "rgba(255, 255, 255, .5)",
-        fontSize: 12
+        fontSize: 8
       }
     },
     series: [
@@ -591,7 +591,7 @@
         label: { // 图形上的文字
           show: true, // 修改此处配置，让标签显示在饼图外部  
           position: 'outside',
-          fontSize: 12,
+          fontSize: 10,
           formatter: function (params) { // 对标签的显示格式进行自定义  
             var value = Math.round(params.value); // 对数值进行取整  
             var percent = Math.round(params.percent); // 对百分数进行取整并转化为整数  
@@ -602,8 +602,8 @@
           borderRadius: 5
         },
         labelLine: { // 链接文字和图形的线是否显示
-          length: 15,
-          length2: 10
+          length: 12,
+          length2: 8
         },
         data: [{
           value: 276,
@@ -652,7 +652,7 @@
       itemHeight: 10,
       textStyle: {
         color: "rgba(255, 255, 255, .5)",
-        fontSize: 14
+        fontSize: 8
       }
     },
     series: [
@@ -663,7 +663,7 @@
         center: ['50%', '50%'],
         roseType: 'radius',
         label: {  // 图形文字的标签
-          fontSize: 12,
+          fontSize: 10,
           formatter: function (params) { // 对标签的显示格式进行自定义  
             var value = Math.round(params.value); // 对数值进行取整  
             var percent = Math.round(params.percent); // 对百分数进行取整并转化为整数  
@@ -671,8 +671,8 @@
           },
         },
         labelLine: {  // 链接图形和文字的线条
-          length: 15,
-          length2: 10
+          length: 12,
+          length2: 8
         },
         itemStyle: {
           borderRadius: 5
